@@ -1,14 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, TextInput, View } from 'react-native';
 import Login from './app/screens/Login';
+import Header from './app/Components/Header';
+import Foother from './app/Components/Foother';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo} >Aplicacion 5C</Text>
-      <ActivityIndicator/>
-      <Text>Ejemplo de app</Text>
-      <StatusBar style="auto" />
+      <Header titulo='Calculadora' 
+      nombre='Luis Alberto Mendoza' 
+      imagen={require('./assets/guero.png')}/>
+
+      <Login/>
+      
+      <Foother fecha='2025-02-07' telefono='614-123-4567'/>
     </View>
   );
 }
