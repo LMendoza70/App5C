@@ -3,6 +3,7 @@ import { ActivityIndicator, StyleSheet, Text, TextInput, View } from 'react-nati
 import Login from './app/screens/Login';
 import Header from './app/Components/Header';
 import Foother from './app/Components/Foother';
+import Calculadora from './app/screens/Calculadora';
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
       nombre='Luis Alberto Mendoza' 
       imagen={require('./assets/guero.png')}/>
 
-      <Login/>
+      <Calculadora/>
       
       <Foother fecha='2025-02-07' telefono='614-123-4567'/>
     </View>
