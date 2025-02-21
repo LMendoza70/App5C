@@ -23,6 +23,7 @@ const Tienda = () => {
     const [loading,setLoading]=useState<boolean>(true);
     
     const loadData= async()=>{
+        setLoading(true);
         try{
             const respuesta=await fetch('https://fakestoreapi.com/products/1');
             if(!respuesta.ok){
@@ -32,11 +33,10 @@ const Tienda = () => {
             const datos= await respuesta.json();
             console.log(datos);
             setProducto(datos);
+            setLoading(false);
 
         }catch(e){
-            console.log('Error : '+e)
-        }finally{
-            setLoading(false);
+            console.log('Error : ',e)
         }
     }
 
@@ -44,7 +44,8 @@ const Tienda = () => {
         return(
             <View>
                 <Text>Tienda</Text>
-                <Text>{producto.title}</Text>
+                <Text>Producto : {producto?.title}</Text>
+                <Text>descripcion : {producto?.description}</Text>
             </View>
         )
     
