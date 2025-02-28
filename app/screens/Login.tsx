@@ -1,6 +1,7 @@
 import { Alert, Button, StyleSheet, Text, TextInput, View } from "react-native";
 import Boton from "../Components/Boton";
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { Link } from "expo-router";
 
 export default function Login(){
     return(
@@ -25,6 +26,9 @@ export default function Login(){
             <Boton titulo="Facebook" onPress={()=>{console.log('Hola ...')}}
             icono={<AntDesign name="facebook-square" size={24} color="white"/>}
             estilo={estilos.boton} />
+            <Link href={"../index"}>
+            go back...
+            </Link>
         </View>
 
     )

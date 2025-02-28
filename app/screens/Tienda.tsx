@@ -1,6 +1,7 @@
 import { ActivityIndicator, Button, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import Boton from '../Components/Boton'
+import { Link } from 'expo-router'
 
 
 const Tienda = () => {
@@ -46,6 +47,9 @@ const Tienda = () => {
                 <Text>Tienda</Text>
                 <Text>Producto : {producto?.title}</Text>
                 <Text>descripcion : {producto?.description}</Text>
+                <Link href={"../index"}>
+                    go back...
+                </Link>
             </View>
         )
     
