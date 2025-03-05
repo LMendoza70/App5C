@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, StyleSheet, Text, TextInput, View } from 'react-native';
-import Login from './app/screens/Login';
-import Header from './app/Components/Header';
-import Foother from './app/Components/Foother';
-import Calculadora from './app/screens/Calculadora';
+import Login from './app-temp/screens/Login';
+import Header from './app-temp/Components/Header';
+import Foother from './app-temp/Components/Foother';
+import Calculadora from './app-temp/screens/Calculadora';
 
 export default function App() {
   return (

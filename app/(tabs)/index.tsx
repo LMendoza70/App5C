@@ -1,19 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { Link, useRouter } from 'expo-router'
-import Boton from '../app-temp/Components/Boton'
 
-const index = () => {
-    const ruta= useRouter();
+const home = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo} >Login...</Text>
-        <Boton onPress={()=>ruta.push('./(tabs)/')} titulo='Ir a Home'/>
+      <Text style={styles.titulo}>home</Text>
     </View>
   )
 }
 
-export default index
+export default home
 
 const styles = StyleSheet.create({
     container:{

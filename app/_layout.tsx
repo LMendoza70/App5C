@@ -1,13 +1,9 @@
 import { Stack } from "expo-router";
 
-const layout=()=>{
+export default function principalLayout(){
     return(
-        <Stack>
-            <Stack.Screen name="/index"/>
-            <Stack.Screen name="/ListaProductos"/>
-            <Stack.Screen name="/Tienda"/>
+        <Stack screenOptions={{headerShown:false}}>
+            
         </Stack>
     )
 }
-
-export default layout;

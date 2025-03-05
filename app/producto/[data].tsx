@@ -1,19 +1,19 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { Link, useRouter } from 'expo-router'
-import Boton from '../app-temp/Components/Boton'
+import { useLocalSearchParams } from 'expo-router'
 
-const index = () => {
-    const ruta= useRouter();
+const objeto = () => {
+    const {data}=useLocalSearchParams();
+    const datajson=JSON.parse(data+'');
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo} >Login...</Text>
-        <Boton onPress={()=>ruta.push('./(tabs)/')} titulo='Ir a Home'/>
+      <Text style={styles.titulo}>el producto es : {datajson.title}</Text>
+        <Text style={styles.titulo}>el precio es : {datajson.price}</Text>
     </View>
   )
 }
 
-export default index
+export default objeto
 
 const styles = StyleSheet.create({
     container:{

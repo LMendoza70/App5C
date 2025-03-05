@@ -6,7 +6,7 @@ const about = () => {
   return (
     <View>
       <Text>about</Text>
-      <Link href={"./index"}>
+      <Link href={"./"}>
         go back...
       </Link>
     </View>
